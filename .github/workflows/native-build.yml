@@ -33,7 +33,7 @@ jobs:
 
       - name: Zip the packaged application
         run: |
-          zip -r TG-FF-BUNDLE-macos-aarch64.zip TG-FF-BUNDLE/*
+          zip -r TG-FF-BUNDLE-macos-aarch64.zip TG-FF-BUNDLE.app
 
       - name: Upload packaged application
         uses: actions/upload-artifact@v4
