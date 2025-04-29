@@ -3,7 +3,7 @@ name: Build Java + Vue Project
 on:
   push:
     branches:
-      - v3
+      - master
   pull_request:
 
 jobs:
