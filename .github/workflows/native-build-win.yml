@@ -30,9 +30,6 @@ jobs:
           --main-class ff.Agent
           --name TG-FF-BUNDLE
           --type app-image
-          --add-modules java.base,java.compiler,java.desktop,java.instrument,java.management,java.naming,java.rmi,java.scripting,java.sql,java.xml.crypto,jdk.net,jdk.unsupported,jdk.xml.dom 
-          --jlink-options "--no-man-pages" 
-          --jlink-options "--no-header-files" 
           --icon icons\\win.ico
 
       - name: Zip the packaged application
