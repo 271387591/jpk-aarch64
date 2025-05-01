@@ -23,13 +23,7 @@ jobs:
 
       - name: Package application with jpackage
         run: |
-          jpackage \
-            --input dist \
-            --main-jar tg-ff-inner.bundle \
-            --main-class ff.Agent \
-            --name TG-FF-BUNDLE \
-            --type app-image \
-            --icon icons/win.ico
+          jpackage --input dist --main-jar tg-ff-inner.bundle --main-class ff.Agent --name TG-FF-BUNDLE --type app-image --icon icons/win.ico
 
       - name: Zip the packaged application
         run: |
