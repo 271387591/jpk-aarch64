@@ -28,16 +28,18 @@ jobs:
           --input dist
           --main-jar tg-ff-inner.bundle
           --main-class ff.Agent
-          --name TG-FF-BUNDLE
+          --name tg-ff-inner
           --type app-image
+          --jlink-options "--no-man-pages" 
+          --jlink-options "--no-header-files" 
           --icon icons\\win.ico
 
       - name: Zip the packaged application
         shell: cmd
-        run: powershell Compress-Archive -Path TG-FF-BUNDLE -DestinationPath TG-FF-BUNDLE-windows-x64.zip
+        run: powershell Compress-Archive -Path tg-ff-inner -DestinationPath tg-ff-inner-windows-x64.zip
 
       - name: Upload packaged application
         uses: actions/upload-artifact@v4
         with:
-          name: TG-FF-BUNDLE-windows-x64
-          path: TG-FF-BUNDLE-windows-x64.zip
+          name: tg-ff-inner-windows-x64
+          path: tg-ff-inner-windows-x64.zip
